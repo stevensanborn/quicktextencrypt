@@ -1,0 +1,29 @@
+{
+  "name": "cryptoguard-text-encrypt-decrypt",
+  "version": "1.0.0",
+  "description": "Chrome extension for securely encrypting and decrypting text using AES-256 encryption.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevensanborn/quicktextencrypt.git"
+  },
+  "keywords": [
+    "encryption",
+    "decryption",
+    "chrome-extension",
+    "security",
+    "privacy"
+  ],
+  "author": "Steven Sanborn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevensanborn/quicktextencrypt/issues"
+  },
+  "homepage": "https://github.com/stevensanborn/quicktextencrypt#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}

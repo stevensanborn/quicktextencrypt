@@ -3,7 +3,7 @@
   "name": "Quick Text Encrypt & Decrypt",
  
   "version": "1.0.0",
-  "description": "Securely encrypt and decrypt text using AES-256 encryption. Protect sensitive information with a custom PIN. Ideal for safeguarding messages, notes, and personal data while browsing.",
+  "description": "Securely encrypt and decrypt text using AES-256 encryption. Protect sensitive information with a custom PIN. Ideal for safeguarding messages, notes, and personal data while browsing. Please refer to the link for codebase",
   "author": "Steven Sanborn",
   "homepage_url": "https://github.com/stevensanborn/quicktextencrypt/blob/main/README.md",
   "permissions": [
