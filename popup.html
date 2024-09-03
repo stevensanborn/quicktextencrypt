@@ -5,11 +5,13 @@
   <style>
     body {
       width: 300px;
-      height: 450px; /* Increased height */
+      height: 470px; /* Increased height to accommodate the help button */
       padding: 20px;
       background-color: #121212;
       color: #e0e0e0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
     }
     textarea, input {
       width: 100%;
@@ -41,8 +43,11 @@
     button:active {
       transform: scale(0.98);
     }
+    #text {
+      height: 100px;
+    }
     #result {
-      min-height: 100px;
+      height: 120px;
       resize: vertical;
     }
     #copyButton {
@@ -52,15 +57,33 @@
     #copyButton:hover {
       background-color: #24a347;
     }
+    #helpButton {
+      align-self: flex-end;
+      background-color: #4a4a4a;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      text-decoration: none;
+      color: #ffffff;
+      margin-top: auto;
+    }
+    #helpButton:hover {
+      background-color: #5a5a5a;
+    }
   </style>
 </head>
 <body>
-  <textarea id="text" rows="4" placeholder="Enter text" required></textarea>
+  <textarea id="text" placeholder="Enter text" required></textarea>
   <input type="password" id="pin" placeholder="Enter PIN" required>
   <button id="encrypt">Encrypt</button>
   <button id="decrypt">Decrypt</button>
-  <textarea id="result" rows="4" readonly></textarea>
+  <textarea id="result" readonly></textarea>
   <button id="copyButton">Copy to Clipboard</button>
+  <a id="helpButton" href="https://github.com/stevensanborn/quicktextencrypt/blob/main/README.md" target="_blank" title="Help">?</a>
   <script src="crypto-js.min.js"></script>
   <script src="popup.js"></script>
 </body>
