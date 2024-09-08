@@ -7,7 +7,6 @@
   "author": "Steven Sanborn",
   "homepage_url": "https://github.com/stevensanborn/quicktextencrypt/blob/main/README.md",
   "permissions": [
-    "storage",
     "contextMenus"
   ],
   "host_permissions": [],
