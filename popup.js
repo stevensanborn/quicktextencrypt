@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('encrypt').addEventListener('click', encrypt);
   document.getElementById('decrypt').addEventListener('click', decrypt);
   document.getElementById('copyButton').addEventListener('click', copyToClipboard);
+  document.getElementById('clearButton').addEventListener('click', function() {
+    document.getElementById('text').value = '';
+    document.getElementById('result').value = '';
+});
 });
 
 function encrypt() {

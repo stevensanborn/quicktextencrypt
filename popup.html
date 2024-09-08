@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Encrypt/Decrypt</title>
+  <title>Encrypt/Decrypt with a PIN</title>
   <style>
     body {
       width: 300px;
@@ -35,7 +35,9 @@
       cursor: pointer;
       transition: background-color 0.3s, transform 0.1s;
       font-size: 14px;
+      width: 100%;
       font-weight: bold;
+      
     }
     button:hover {
       background-color: #5600E8;
@@ -51,7 +53,7 @@
       resize: vertical;
     }
     #copyButton {
-      display: none;
+      display: inline-block;
       background-color: #1e8e3e;
     }
     #copyButton:hover {
@@ -63,10 +65,12 @@
       border-radius: 50%;
       width: 30px;
       height: 30px;
+      max-width: 30px;
+      min-height: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 18px;
+      font-size: 12px;
       text-decoration: none;
       color: #ffffff;
       margin-top: auto;
@@ -74,17 +78,34 @@
     #helpButton:hover {
       background-color: #5a5a5a;
     }
+    label {
+      margin-bottom: 5px;
+      color: #a0a0a0;
+    }
+    p{
+      font-style: italic;
+    }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+  <label for="text">Enter text to be encrypted/decrypted : </label>
   <textarea id="text" placeholder="Enter text" required></textarea>
+  <label for="pin">The pin will be used to encrypt/decrypt the text. If you plan to decrypt the text, you will need the pin you used to encrypt the text.</label>
   <input type="password" id="pin" placeholder="Enter PIN" required>
-  <button id="encrypt">Encrypt</button>
-  <button id="decrypt">Decrypt</button>
+  <div style="display: flex; ">
+    <button id="encrypt"><i class="fas fa-lock"></i> Encrypt</button>
+    <button id="decrypt"><i class="fas fa-unlock"></i> Decrypt</button>
+  </div>
   <textarea id="result" readonly></textarea>
-  <button id="copyButton">Copy to Clipboard</button>
-  <a id="helpButton" href="https://github.com/stevensanborn/quicktextencrypt/blob/main/README.md" target="_blank" title="Help">?</a>
+  <div style="display: flex; ">
+  <button id="copyButton"><i class="fas fa-copy"></i> Copy</button>
+  <button id="clearButton"><i class="fas fa-xmark "></i>Clear</button>
+</div>
   <script src="crypto-js.min.js"></script>
   <script src="popup.js"></script>
+  <p >This page allows you to encrypt and decrypt text using a secure AES encryption algorithm. Be mindful of any extra spaces or characters in the text you enter. Please report any issues or requests <a href="https://github.com/stevensanborn/quicktextencrypt/issues">here</a>.</p>
+  <a id="helpButton" href="https://github.com/stevensanborn/quicktextencrypt/blob/main/README.md" target="_blank" title="Help">?</a>
+  
 </body>
 </html>
